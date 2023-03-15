@@ -13,7 +13,7 @@ jobs:
         run: |
           echo "Hello, World! And the secret is ${{secrets.TEST_SECRET_IN_FORKS}}"
 
-          if [[ "${secrets.TEST_SECRET_IN_FORKS}}" != "" ]]; then
+          if [[ "${{secrets.TEST_SECRET_IN_FORKS}}" != "" ]]; then
             echo "Secret is not empty!"
           fi
 
