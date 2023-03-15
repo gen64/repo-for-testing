@@ -11,7 +11,11 @@ jobs:
       - name: Say hello to the world
         id: helloworld
         run: |
-          echo "Hello, World!"
+          echo "Hello, World! And the secret is ${{secrets.TEST_SECRET_IN_FORKS}}"
+
+          if [[ "${secrets.TEST_SECRET_IN_FORKS}}" != "" ]]; then
+            echo "Secret is not empty!"
+          fi
 
       - name: Checkout repository
         uses: actions/checkout@v2.3.4
