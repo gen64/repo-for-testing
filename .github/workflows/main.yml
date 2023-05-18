@@ -2,22 +2,14 @@ name: Test workflow
 
 on:
   pull_request:
+  merge_group:
 
 jobs:
   test:
     name: Test
     runs-on: ubuntu-20.04
     steps:
-      - name: Say hello to the world
-        id: helloworld
+      - name: Sleep 60
         run: |
-          echo "Hello, World! And the secret is ${{secrets.TEST_SECRET_IN_FORKS}}"
-
-          if [[ "${{secrets.TEST_SECRET_IN_FORKS}}" != "" ]]; then
-            echo "Secret is not empty!"
-          fi
           sleep 60
-
-      - name: Checkout repository
-        uses: actions/checkout@v2.3.4
 
