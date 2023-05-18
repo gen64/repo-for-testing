@@ -1,7 +1,6 @@
 name: Test workflow
 
 on:
-  pull_request:
   merge_group:
 
 jobs:
