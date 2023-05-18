@@ -1,4 +1,4 @@
-name: Test workflow
+name: Workflow with NonRequired
 
 on:
   pull_request:
