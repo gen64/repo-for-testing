@@ -2,7 +2,7 @@ name: Test workflow
 
 on:
   pull_request:
-  merge_queue:
+  merge_group:
 
 jobs:
   test:
