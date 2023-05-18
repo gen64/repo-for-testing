@@ -6,10 +6,10 @@ on:
 
 jobs:
   test:
-    name: RequiredCheck
+    name: NonRequiredCheck
     runs-on: ubuntu-20.04
     steps:
-      - name: Sleep 60
+      - name: Exit 1
         run: |
-          sleep 60
+          exit 1
 
