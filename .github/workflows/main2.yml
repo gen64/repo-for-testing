@@ -9,7 +9,7 @@ jobs:
     name: NonRequiredCheck
     runs-on: ubuntu-20.04
     steps:
-      - name: Exit 1
+      - name: NonRequired
         run: |
-          exit 1
+          exit 0
 
