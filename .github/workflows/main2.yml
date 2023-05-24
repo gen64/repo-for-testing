@@ -2,6 +2,8 @@ name: Workflow with NonRequired
 
 on:
   pull_request:
+    paths:
+      - '1.txt'
   merge_group:
 
 jobs:
