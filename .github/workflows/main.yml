@@ -13,3 +13,13 @@ jobs:
         run: |
           sleep 60
 
+  check-e2e-test-suite-completion:
+    needs: [
+        test
+    ]
+    name: Check e2e test suite completion
+    runs-on: ubuntu-20.04
+    steps:
+      - name: All e2e tests completed
+        run: echo "All e2e tests completed."
+
