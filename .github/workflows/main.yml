@@ -11,7 +11,8 @@ jobs:
     steps:
       - name: Sleep 60
         run: |
-          exit 1
+          sleep 120
+        timeout-minutes: 1
 
   check-e2e-test-suite-completion:
     needs: [
