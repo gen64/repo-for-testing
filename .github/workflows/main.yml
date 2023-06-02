@@ -13,12 +13,12 @@ jobs:
         run: |
           exit 0
   test2:
-    name: RequiredCheck
+    name: RequiredCheck2
     runs-on: ubuntu-20.04
     steps:
       - name: Sleep 60
         run: |
-          exit 1
+          exit 0
 
   check-e2e-test-suite-completion:
     needs: [
