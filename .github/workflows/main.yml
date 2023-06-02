@@ -11,11 +11,19 @@ jobs:
     steps:
       - name: Sleep 60
         run: |
+          exit 0
+  test2:
+    name: RequiredCheck
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Sleep 60
+        run: |
           exit 1
 
   check-e2e-test-suite-completion:
     needs: [
-        test
+        test,
+        test2
     ]
     name: Check e2e test suite completion
     runs-on: ubuntu-20.04
